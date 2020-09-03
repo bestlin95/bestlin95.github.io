@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSFF 原生的，使用简单，自由组合，功能丰富</title>
+    <link rel="stylesheet" href="../../osff-design/styles/index.css">
+    <link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+
+    <div>
+
+        <button 
+            o-template="button" 
+            o-key='btn1' 
+            o-type="full" 
+            o-color="#1890ff"
+            o-text = "跳转按钮"
+            o-url = "http://www.baidu.com"
+        ></button>
+        
+        <button 
+            o-template="button" 
+            o-key='btn2' 
+            o-type="full" 
+            o-color="#1890ff"
+            o-text = "按钮"
+            o-click = "confirm"
+        ></button>
+
+    </div>
+
+</body>
+</html>
+
+<script src="../../osff-design/require.js" defer async="true" data-main="../../osff-design/main.js"></script>
+
+<script>
+    
+    window.osff = {
+        methods:{
+            confirm:function(event){
+                //点击时执行
+                alert('点击了按钮')
+            }
+        }
+    }
+
+</script>

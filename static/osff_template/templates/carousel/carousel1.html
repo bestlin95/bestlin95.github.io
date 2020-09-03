@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSFF 原生的，使用简单，自由组合，功能丰富</title>
+    <link rel="stylesheet" href="../../osff-design/styles/index.css">
+    <link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+
+    <div 
+        o-template="carousel"
+        o-style="height:200px;"
+        o-pagination="true"
+        o-key="num"
+        o-loop="true"
+        o-autoplay="true"
+    >
+        <div o-template="carousel-slider">
+            <div class="number">
+                1
+            </div>
+        </div>
+        <div o-template="carousel-slider">
+            <div class="number">
+                2
+            </div>
+        </div>
+        <div o-template="carousel-slider">
+            <div class="number">
+                3
+            </div>
+        </div>
+        <div o-template="carousel-slider">
+            <div class="number">
+                4
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<script src="../../osff-design/require.js" defer async="true" data-main="../../osff-design/main.js"></script>
+
+<script>
+
+</script>
