@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSFF 原生的，使用简单，自由组合，功能丰富</title>
+    <link rel="stylesheet" href="../../osff-design/styles/index.css">
+    <link rel="stylesheet" href="../../assets/style.css">
+</head>
+<style>
+    img{
+        display: block;
+        width: 560px;
+        height: 420px;
+    }
+</style>
+<body>
+    <div >
+        <div>以下图片均设置了懒加载，如效果不明显，请将网络调至 Slow 3G</div>
+        <img 
+            o-template="img" 
+            o-border="true" 
+            o-src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1599191625097&di=d7a1918f3d361fd4f146a6d76c27992a&imgtype=0&src=http%3A%2F%2Fpicture.ik123.com%2Fuploads%2Fallimg%2F160812%2F4-160Q2151302.jpg">
+        
+        <p>带跳转链接的图片</p>
+        <img 
+            o-template="img" 
+            o-border="true" 
+            o-lazyload="true"  
+            o-url="http://www.baidu.com" 
+            o-src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1599191625097&di=597ff14c0a7ae4df25bd057b58796f58&imgtype=0&src=http%3A%2F%2Fattach.bbs.miui.com%2Fforum%2F201311%2F17%2F174124tp3sa6vvckc25oc8.jpg">
+        
+        <p>绑定点击事件的图片</p>
+        <img 
+            o-template="img" 
+            o-border="true" 
+            o-click="clickImg" 
+            o-lazyload="true"  
+            o-src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1599191625097&di=43a4ae7a42ba20373b32e30822dfd2b9&imgtype=0&src=http%3A%2F%2Fimg8.zol.com.cn%2Fbbs%2Fupload%2F18816%2F18815745.jpg">
+        
+        <p>自定义加载时的loading图</p>
+        <img 
+            o-template="img" 
+            o-border="true" 
+            o-lazyload="true" 
+            o-loading="../../assets/img/loading.gif" 
+            o-src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1599191625096&di=359183dabe3ccff49635b4ae87570f72&imgtype=0&src=http%3A%2F%2Fattach.bbs.miui.com%2Fforum%2F201301%2F05%2F163809wo066osj41x6xwo2.jpg">
+        <img o-template="img" o-border="true" o-lazyload="true"  o-src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1599191723033&di=44ebf917d254a9c7506b01c9ba2dba20&imgtype=0&src=http%3A%2F%2Fimg1.imgtn.bdimg.com%2Fit%2Fu%3D2913287666%2C2010318971%26fm%3D214%26gp%3D0.jpg">
+        <img o-template="img" o-border="true" o-lazyload="true"  o-src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1599191731953&di=75474c541f2f7d0ea6e34a41045317a6&imgtype=0&src=http%3A%2F%2Fimg4.imgtn.bdimg.com%2Fit%2Fu%3D2848120264%2C2778704476%26fm%3D214%26gp%3D0.jpg">
+        <img o-template="img" o-border="true" o-lazyload="true"  o-src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1599191625095&di=b43bef1c64a9e2ceace960ac4d956f75&imgtype=0&src=http%3A%2F%2Fimg8.zol.com.cn%2Fbbs%2Fupload%2F19570%2F19569693.jpg">
+        <img o-template="img" o-border="true" o-lazyload="true"  o-src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1599191625094&di=3eee81c56bcc9648a776dccc0f177e0f&imgtype=0&src=http%3A%2F%2Fimg.pconline.com.cn%2Fimages%2Fupload%2Fupc%2Ftx%2Fsoftbbs%2F1003%2F07%2Fc0%2F3134443_1267900790753_1024x1024soft.jpg">
+        <img o-template="img" o-border="true" o-lazyload="true"  o-src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1599191767355&di=df0c3af371bf06767ee2948cba27b4a0&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F6%2F59c89d90eae65.jpg">
+        <img o-template="img" o-border="true" o-lazyload="true"  o-src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1599191625093&di=07d490360cfb7119ac6828bcb2e5273f&imgtype=0&src=http%3A%2F%2Fattach.bbs.miui.com%2Fforum%2F201408%2F07%2F200155xgo7jhigcbjcw39j.jpg">
+    </div>
+</body>
+</html>
+
+<script src="../../osff-design/require.js" defer async="true" data-main="../../osff-design/main.js"></script>
+
+<script>
+    window.osff = {
+        methods:{
+            clickImg:function(event){
+                //点击时执行
+                alert('点击了图片')
+            }
+        }
+    }
+</script>

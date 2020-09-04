@@ -8,6 +8,8 @@ require.config({
         'carousel':"core/components/carousel/index",
         'icon':"core/components/icon/index",
         'button':"core/components/button/index",
+        'img':"core/components/img/index",
+        'toTop':"core/components/toTop/index",
     },
     shim: {
         'swiper':{
@@ -23,7 +25,9 @@ require(
     'swiper',
     'carousel',
     'icon',
-    'button'
+    'button',
+    'img',
+    'toTop'
     ], 
     function (
     $,
@@ -31,7 +35,30 @@ require(
     Swiper,
     carousel,
     icon,
-    button
+    button,
+    img,
+    toTop
     ){
+
+    // if(window.osff){
+    //     window.osff.scrollEventList = []
+    // }else{
+    //     window.osff = {}
+    //     window.osff.scrollEventList = []
+    // }
+
+    // function onScroll(){
+
+    //     if(window.osff.scrollEventList.length>0){
+
+    //         window.osff.scrollEventList.forEach(fn => {
+    //             fn()
+    //         });
+
+    //     }
+
+    // }
+
+    // $(window).scroll(onScroll)
         
 });
